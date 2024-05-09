@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <body class="bg-slate-200">
+		<div class="bg-green-100 h-28 flex items-center mb-5">
+			<header class="flex container max-w-6xl mx-auto">
+                <div class="mx-auto">
+                    <h1><span class="font-semibold text-green-400 text-6xl mx-auto">ReserWeb</span></h1>
+                </div>
+				<div class="flex float-right">
+					<h1 class="mb-2">Hora Colombia<p id="hora"></p></h1>
+				</div>
+			</header>
+		</div>
+		<div class="">
+            <div class="font-semibold text-green-400 text-7xl ml-10 my-24">
+                <h1 class="ml-20">Canchas</h1>
+            </div>
+			<div class="bg-white py-10 rounded-xl shadow-md shadow-slate-400 container mx-10 mt-10 w-[1280px]">
+                <div class="grid grid-cols-2">
+                    <div class=" bg-[url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0O8yo87GcUhtR8xkMrIXhQ&cb_client=search.gws-prod.gps&yaw=257.9408&pitch=0&thumbfov=100&w=520&h=175)] bg-cover h-96 w-96 mx-auto rounded-lg mt-10">
+                        
+                    </div>
+                    <div class="bg-green-200 rounded-lg mt-10 ">
+                        <h1 class="font-semibold text- bg-slate-200 rounded-3xl max-w-[58px] pl-[9px]">Cancha La Modelo</h1>
+                        <div class="bg-gradient-to-r from-green-300 to-zinc-200 rounded-2xl my-3 p-2 max-w-[256px] py-4">
+							<h1 class="font-semibold text-green-800 text-4xl ml-4">Cancha futbol 7</h1>
+						</div>
+                    </div>
+                </div>
+				<div class="grid grid-cols-2">
+                    <div class=" bg-[url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0O8yo87GcUhtR8xkMrIXhQ&cb_client=search.gws-prod.gps&yaw=257.9408&pitch=0&thumbfov=100&w=520&h=175)] bg-cover h-96 w-96 mx-auto rounded-lg mt-10">
+                        
+                    </div>
+                    <div class="bg-green-200 rounded-lg mt-10 ">
+                        <h1 class="font-semibold text- bg-slate-200 rounded-3xl max-w-[58px] pl-[9px]">Cancha La Modelo</h1>
+                        <div class="bg-gradient-to-r from-green-300 to-zinc-200 rounded-2xl my-3 p-2 max-w-[256px] py-4">
+							<h1 class="font-semibold text-green-800 text-4xl ml-4">Cancha futbol 7</h1>
+						</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2">
+                    <div class=" bg-[url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0O8yo87GcUhtR8xkMrIXhQ&cb_client=search.gws-prod.gps&yaw=257.9408&pitch=0&thumbfov=100&w=520&h=175)] bg-cover h-96 w-96 mx-auto rounded-lg mt-10">
+                        
+                    </div>
+                    <div class="bg-green-200 rounded-lg mt-10 ">
+                        <h1 class="font-semibold text- bg-slate-200 rounded-3xl max-w-[58px] pl-[9px]">Cancha La Modelo</h1>
+                        <div class="bg-gradient-to-r from-green-300 to-zinc-200 rounded-2xl my-3 p-2 max-w-[256px] py-4">
+							<h1 class="font-semibold text-green-800 text-4xl ml-4">Cancha futbol 7</h1>
+						</div>
+                    </div>
+                </div><div class="grid grid-cols-2">
+                    <div class=" bg-[url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0O8yo87GcUhtR8xkMrIXhQ&cb_client=search.gws-prod.gps&yaw=257.9408&pitch=0&thumbfov=100&w=520&h=175)] bg-cover h-96 w-96 mx-auto rounded-lg mt-10">
+                        
+                    </div>
+                    <div class="bg-green-200 rounded-lg mt-10 ">
+                        <h1 class="font-semibold text- bg-slate-200 rounded-3xl max-w-[58px] pl-[9px]">Cancha La Modelo</h1>
+                        <div class="bg-gradient-to-r from-green-300 to-zinc-200 rounded-2xl my-3 p-2 max-w-[256px] py-4">
+							<h1 class="font-semibold text-green-800 text-4xl ml-4">Cancha futbol 7</h1>
+						</div>
+                    </div>
+                </div>
+                
+			</div>
+		</div>
+		<script>
+			function actualizarHora() {
+    			var ahora = new Date();
+    			var hora = ahora.getHours();
+    			var minutos = ahora.getMinutes();
+    			var segundos = ahora.getSeconds();
+
+    
+    			var horaFormateada = (hora < 10 ? '0' + hora : hora).toString();
+    			var minutosFormateados = (minutos < 10 ? '0' + minutos : minutos).toString();
+    			var segundosFormateados = (segundos < 10 ? '0' + segundos : segundos).toString();
+
+    			var horaActual = horaFormateada + ':' + minutosFormateados + ':' + segundosFormateados;
+    			document.getElementById('hora').innerHTML = horaActual;
+			}
+			setInterval(actualizarHora, 1000);
+
+       
+       		 actualizarHora();
+		</script>
+</Layout>
